@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="alert" class="alert-box">알림창임
+        <button onclick="알림창('none');">닫기</button>
+    </div>
+    <button onclick="알림창('block');">열기</button>
+    
+
+    <script>
+
+        function 알림창(구멍) {
+
+            document.getElementById('alert').style.display = 구멍;
+
+        }
+
+        
+
+
+    </script>
+
+
+</body>
+</html>
