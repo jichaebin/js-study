@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="form(if else).css" rel="stylesheet">
+</head>
+<body>
+    <div class="black-bg">
+        <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <form action="success.html"> <!-- form 은 서버로 유저 정보 전송하려고 쓰는 것 (전송하려면 action="url ~~~~") -->
+        <div class="my-3">
+          <input type="text" class="form-control" id="email">
+         </div>
+         <div class="my-3">
+           <input type="password" class="form-control" id="pass">
+         </div>
+         <button type="submit" class="btn btn-primary" id="send">전송</button>  <!-- 전송버튼은 버튼 타입 (type = "submit") -->
+         <button type="button" class="btn btn-danger" id="close">닫기</button>   <!-- 일반버튼은 버튼 타입 (type = "button") -->
+      </form> 
+        </div>
+    </div> 
+    <div class="main-bg">
+        <h4>shirts on sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script> 
+
+    
+   <script>
+
+        
+        document.querySelector('#login').addEventListener('click' , function(){
+            document.querySelector('.black-bg').classList.add('show');
+        })
+
+        document.getElementById('close').addEventListener('click' , function(){
+            document.getElementsByClassName('black-bg')[0].style.display = 'none';
+        })
+
+
+
+    </script>
+
+
+
+    <script>
+
+
+        $('#send').on('click' , function(e){
+            if(document.getElementById('email').value == ''){
+                alert('아이디 입력 안함');
+                e.preventDefault();
+                
+            }
+
+            if(document.getElementById('pass').value == ''){
+                alert('비밀번호를 입력하쇼')
+            }
+
+            if(document.getElementById('pass').value.length < 6){
+                alert('비번 더 길게');
+            }
+        });
+
+        
+    </script>
+
+    <script>
+
+        
+        document.getElementById('email').addEventListener('input' , function(){
+            console.log('안녕');
+        })
+
+        /*
+        -> input에 입력한 값이 바뀔 때 발생 (== change 랑 같은 기능이지만 change는 포커스를 잃었을 때 발생)
+
+        */
+
+
+
+    </script>
+</body>
+</html>

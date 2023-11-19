@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="애니.css" rel="stylesheet">
+</head>
+<body>
+    <div class="black-bg">
+        <div class="white-bg">
+          <h4>로그인하세요</h4>
+          <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+    </div> 
+
+    <button id="btn">로그인</button>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script> 
+   
+   <script>
+
+        document.querySelector('#btn').addEventListener('click' , function(){
+            document.querySelector('.black-bg').classList.add('show');
+        })
+
+        document.getElementById('close').addEventListener('click' , function(){
+            document.getElementsByClassName('black-bg')[0].style.display = 'none';
+        })
+
+
+    
+
+    /*
+    
+    애니메이션 효과 주는 법 :
+
+    1.시작스타일
+    2.최종스타일
+    3.최종 스타일로 변하라고 코드 짜기
+    4.시작 스타일에 transition (css에)적용하기 
+    ex) transition: all 1s; 추가
+
+
+    */
+
+
+    </script>
+
+
+
+      
+</body>
+</html>

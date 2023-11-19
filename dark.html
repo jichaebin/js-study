@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="form(if else).css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar nav bar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">JSshop</span>
+            <span class="badge bg-dark">Dark🔄</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="black-bg">
+        <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <form action="success.html"> <!-- form 은 서버로 유저 정보 전송하려고 쓰는 것 (전송하려면 action="url ~~~~") -->
+        <div class="my-3">
+          <input type="text" class="form-control" id="email">
+         </div>
+         <div class="my-3">
+           <input type="password" class="form-control" id="pass">
+         </div>
+         <button type="submit" class="btn btn-primary" id="send">전송</button>  <!-- 전송버튼은 버튼 타입 (type = "submit") -->
+         <button type="button" class="btn btn-danger" id="close">닫기</button>   <!-- 일반버튼은 버튼 타입 (type = "button") -->
+      </form> 
+        </div>
+    </div> 
+    <div class="main-bg">
+        <h4>shirts on sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script> 
+
+    
+   <script>
+
+        
+        document.querySelector('#login').addEventListener('click' , function(){
+            document.querySelector('.black-bg').classList.add('show');
+        })
+
+        document.getElementById('close').addEventListener('click' , function(){
+            document.getElementsByClassName('black-bg')[0].style.display = 'none';
+        })
+
+
+    </script>
+
+    <script>
+
+        var count = 0;
+
+        $('.badge').on('click' , function(){
+            count+= 1;
+
+            if(count % 2 == 1) {
+            document.getElementsByClassName('badge')[0].innerHTML = 'Light🔄';
+        } else {
+            document.getElementsByClassName('badge')[0].innerHTML = 'Dark🔄';
+        }
+        });
+
+
+    </script>
+
+
+
+</body>
+</html>

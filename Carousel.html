@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>Document</title>
+    <link href="Carousel.css" rel="stylesheet">
     <style>
         .slide-container {
             width: 300vw;
@@ -34,6 +35,55 @@
     </style>
 </head>
 <body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <span class="navbar-brand">JS shop</span>
+        <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav> 
+<ul class="list-group">
+    <li class="list-group-item">보안현황</li>
+    <li class="list-group-item">출입</li>
+    <li class="list-group-item">자산</li>
+    <li class="list-group-item">네트워크 보안</li>
+    <li class="list-group-item">기타</li>
+</ul> 
+<script>
+
+  document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
+      
+      document.getElementsByClassName('list-group')[0].classList.toggle('show');
+  })
+
+
+
+</script>
+    <div class="black-bg">
+      <div class="white-bg">
+    <h4>로그인하세요</h4>
+    <form action="success.html"> <!-- form 은 서버로 유저 정보 전송하려고 쓰는 것 (전송하려면 action="url ~~~~") -->
+      <div class="my-3">
+        <input type="text" class="form-control" id="email">
+      </div>
+      <div class="my-3">
+        <input type="password" class="form-control" id="pass">
+      </div>
+      <button type="submit" class="btn btn-primary" id="send">전송</button>  <!-- 전송버튼은 버튼 타입 (type = "submit") -->
+      <button type="button" class="btn btn-danger" id="close">닫기</button>   <!-- 일반버튼은 버튼 타입 (type = "button") -->
+    </form> 
+      </div>
+    </div>
+    <div class="main-bg">
+      <h4>shirts on sale</h4>
+      <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+
+    <div class="alert alert-danger">
+      <span id="n">5</span>초 이내 구매시 사은품 증정!
+    </div>
+
     <div style="overflow: hidden">
         <div class="slide-container">
           <div class="slide-box">
