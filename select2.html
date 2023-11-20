@@ -56,22 +56,17 @@
     //     var 변수명 = '<p>태밍밍!</p>';
     //     document.querySelector('#???').insertAdjacentHTML('beforeend' , 변수명);
     //     
-    //      제이쿼리 -> $('#test').append(???);
-
-          
-
+    //     제이쿼리 -> $('#test').append(???);
         
     </script>
 
     <script>
 
-        var pants = [28 , 30 , 32];
         
         $('.form-select').eq(0).on('input' , function(){
             if($('.form-select').eq(0).val() == '니트'){
             $('.form-select').eq(1).removeClass('form-hide');
             } 
-            
             // else if{
             //     $('.form-select').eq(1).addClass('form-hide')
             // }  // -> 셔츠 골랐을 때 삭제됨
@@ -79,13 +74,8 @@
             else if($('.form-select').eq(0).val() == '바지') {
                 $('.form-select').eq(1).removeClass('form-hide');
                 $('.form-select').eq(1).html('');
-                pants.forEach(function(a){
-                $('.form-select').eq(1).append(`<option>${a}</option>`);
-
-                });                                          // 안에 변수 개수 만큼 반복해줌 , foreach는 콜백함수 필수
-            } 
-        
-            });
+            }
+        });
             
             /* 오브젝트 자료도 반복문 가능 -> for (var key in 변수명)
             
