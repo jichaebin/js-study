@@ -6,6 +6,53 @@
     <title>Document</title>
 </head>
 <body>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+    </script>
+
+
+<p class="hello" id="hi">안녕</p>   
+<button id="test-btn">버튼</button>
+<button id="but">버튼</button>
+
+<div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <button class="btn btn-danger" id="close">닫기</button>
+    </div>
+  </div> 
+
+<script>
+    
+    // document.querySelector('.hello').innerHTML = '바보';
+    // //제이쿼리 
+    $('.hello').html('안뇨옹');
+    $('.hello').css('color' , 'pink');
+    $('.hello').addClass('show');
+
+    // document.getElementsByClassName('hello')[0].innerHTML = '메롱';
+
+    // document.getElementById('hi').addEventListener('click' , function(){
+    //     document.getElementById('hi').innerHTML = '공주';
+    // })
+
+
+    document.getElementById('test-btn').addEventListener('click' , function(){
+        document.getElementById('test-btn').style.fontSize = '50px';
+    })
+
+    //제이쿼리 버전
+    $('#test-btn').on('click' , function(){
+        $('#test-btn').css('color' , 'gray');
+    })
+
+</script>
+
+
+
     
 </body>
 </html>
