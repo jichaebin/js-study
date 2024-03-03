@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+    <div class="alert-box" id="alert">
+        <p id="title">알림창</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="login('아이디를 입력하세요')">버튼1</button>
+    <button onclick="login('비번을 입력하세요')">버튼2</button>
+
+
+
+    <script>
+
+        // function 아아디() {
+        //     document.getElementById('title').innerHTML = '아이디 입력하셈';
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+
+        // function 비번() {
+        //     document.getElementById('title').innerHTML = '비번 입력하셈';
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+
+
+        function login(로그인) {
+            document.getElementById('title').innerHTML = 로그인;
+            document.getElementById('alert').style.display = 'block';
+        }
+
+
+        //class로 찾기 (인덱싱 필수)
+        //document.getElementsByClassName('title')[0].innerHTML = '아이디 입력'
+
+
+
+        //버튼에 onClick없이 하는 법 -> addEventListener
+        document.getElementById('close').addEventListener('click' , function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+        
+
+        
+        
+
+    </script>
+
+</body>
+</html>

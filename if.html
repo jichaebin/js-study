@@ -8,35 +8,38 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="main.css" rel="stylesheet">
-<!-- 
-    <style>
-      .black-bg {
-    width:  100%;
-    height:  100%;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-    padding: 30px;
-    visibility: hidden;
-    opacity: 0; /* 완전 투명 */
-    transition: all 1s;  /* 애니메이션 효과 줄 때 */
-}
-
-      .show-modal {
-          visibility: hidden;
-          opacity: 1;
-      }
-  </style> -->
 
     <title>Hello, world!</title>
   </head>
   <body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous">
+    </script>
+
     <div class="black-bg">
         <div class="white-bg">
             <h4>로그인하세요</h4>
+            <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary" id="send">전송</button>
+            </form>
+
             <button class="btn btn-danger" id="close">닫기</button>
         </div>
     </div>
+
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
@@ -54,39 +57,31 @@
         <li class="list-group-item">And a fifth one</li>
       </ul>
 
-    <button id="login">로그인</button>
+      <button id="login">로그인</button>
 
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-      crossorigin="anonymous">
-    </script>  
-    
-    
     <script>
-      
-        
-    // document.getElementById('login').addEventListener('click' , function(){
-    //     document.getElementsByClassName('black-bg')[0].classList.add('show-modal')
-    // });
+      <-
+        document.getElementById('email').value;
 
-     $('#login').on('click' , function(){
-       $('.black-bg').addClass('show-modal');
-     });
+        $('#send').on('click' , function(){
+            if(document.getElementById('email').value == ''){
+               alert('아이디 입력 안 함'); 
+            }
+        })
 
-     $('.navbar-toggler').on('click' , function(){
-          $('.list-group').toggle('show');
-      });
 
-     $('#close').on('click' , function(){
-        $('.black-bg').removeClass('show-modal');
-     });
+        $('.navbar-toggler').on('click' , function(){
+                $('.list-group').toggle('show');
+            });
 
+
+        $('#login').on('click' , function(){
+            $('.black-bg').addClass('show-modal')
+
+        })
 
     </script>
-
-
-    
 
   </body>
 </html>
