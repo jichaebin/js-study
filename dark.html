@@ -11,6 +11,8 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <body class="">
+
     <div class="black-bg">
         <div class="white-bg">
             <h4>로그인하세요</h4>
@@ -30,7 +32,8 @@
     </div>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <span class="navbar-brand">Navbar</span>
+          <span class="navbar-brand">JSshop</span>
+          <span class="badge bg-dark">Dark 🔄</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -59,10 +62,6 @@
     <script>
       
         
-    // document.getElementById('login').addEventListener('click' , function(){
-    //     document.getElementsByClassName('black-bg')[0].classList.add('show-modal')
-    // });
-
      $('#login').on('click' , function(){
        $('.black-bg').addClass('show-modal');
      });
@@ -82,23 +81,30 @@
 
         if(document.getElementById('pass').value == ''){
             alert('비번 입력 안 함');
-
+            
         } else if(document.getElementById('pass').value.length < 6) {
             alert('6자 이상 입력하셈!');
         }
      });
 
+     </script>
 
-    /* 
+     <script>
+      
+        let count = 0;
 
-    위 코드 이렇게도 가능함 -> 
-     $('form').on('submit' , function(){
-        if(){
-            alert('')
+        $('.badge').on('click' , function(){
+            count += 1;
+            if(count % 2 == 1){
+                $('.badge').html('Light 🔄');
+            } else {
+                $('.badge').html('dark 🔄');
+            }
         }
-     })
+    ) 
 
-    */
+
+
     </script>
 
 
