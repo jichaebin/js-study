@@ -48,6 +48,9 @@
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
+    <div class="alert alert-danger">
+        5초 이내 구매시 사은품 증정!
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -106,7 +109,11 @@
         }
     ) 
 
+        setTimeout(function(){ 
+            $('.alert').hide();
+         }, 5000)
 
+        // setInterval -> x초마다 코드 실행해줌
 
     </script>
 
