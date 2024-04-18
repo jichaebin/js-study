@@ -49,7 +49,11 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
 
-    <div style="height: 1000px;"></div>
+    <div class="lorem" style="width: 200px; height: 200px; overflow-y: scroll;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, nulla accusantium inventore recusandae fugiat ipsa blanditiis nisi rem vel nihil ullam, 
+        quidem officiis. Architecto illum labore iusto molestias, 
+        voluptas dolor.</div>
+
+    <div style="height: 1000px"></div>
 
     <div class="alert alert-danger">
         5초 이내 구매시 사은품 증정!
@@ -86,9 +90,25 @@
 
     <script>
 
-        window.addEventListener('scroll' , function(){
-            
-        });
+        // window.addEventListener('scroll' , function(){
+        // });
+        $(window).on('scroll' , function(){
+            if(window.scrollY > 100){
+            $('.navbar-brand').css('font-size' , '22px')
+            } else {
+            $('.navbar-brand').css('font-size' , '30px')
+            }
+        })
+
+        $('.lorem').on('scroll' , function(){
+            let 스크롤양 = document.querySelector('.lorem').scrollTop;
+            let 실제높이 = document.querySelector('.lorem').scrollHeight;
+            let 높이 = document.querySelector('.lorem').clientHeight;
+            if(스크롤양 + 실제높이 > 높이){
+                alert('다 읽음');
+            }
+    
+        })
 
     </script>
 
