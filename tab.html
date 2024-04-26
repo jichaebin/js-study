@@ -11,6 +11,25 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <div class="container mt-3">
+      <div class="card p-3">
+        <span class="car-title">상품명</span>
+        <span class="car-price">가격</span>
+      </div>
+    </div>
+
+    <form class="container my-5 form-group">
+      <p>상품선택</p>
+      <select class="form-select mt-2">
+        <option>모자</option>
+        <option>셔츠</option>
+      </select>
+      <select class="form-select mt-2 form-hide">
+        <option>95</option>
+        <option>100</option>
+      </select>
+    </form>
+
     <div class="container mt-5">
         <ul class="list">
           <li class="tab-button">Products</li>
@@ -28,9 +47,6 @@
         </div>
       </div> 
 
-
-
-
       
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
@@ -38,6 +54,22 @@
     </script>  
 
     <script src="tab.js"></script>
+
+    <script>
+
+      /* let car = { name : '소나타' , price : [50000, 3000, 7000] }
+
+      document.querySelector('.car-title').innerHTML = car.name;
+      document.querySelector('.car-price').innerHTML = car.price[2]; */
+
+      $('.form-select').eq(0).on('input' , function(){
+        let value = $('.form-select').eq(0).val();
+        if(value == '셔츠'){
+          $('.form-select').eq(1).removeClass('form-hide');
+        }
+      })
+
+    </script>
 
   </body>
 </html>

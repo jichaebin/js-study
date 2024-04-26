@@ -121,3 +121,9 @@ ul.list {
   .show {
     display: block;
   }
+
+/*select*/
+
+.form-hide {
+    display: none;
+}
